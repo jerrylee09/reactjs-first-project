@@ -1,5 +1,3 @@
-// "use stricted";
-"use strict";
 
 // React.createElement have 3 argument
 // const title = React.createElement (
@@ -18,12 +16,16 @@
 const { createElement } = React;
 const { render } = ReactDOM;
 
-let style = { background: 'red',color: 'white', fontfamily: 'verdana' };
-let element = 'h1'; // the first argument create the element
-let attribute = {id: 'title', className: 'header', style: style }; // this object are the property that the element will have
-let childnode = 'hello world first react script'; //any child content this element
-let reactContainerId = document.getElementById('react-container');
+// let style = { background: 'red',color: 'white', fontfamily: 'verdana' };
+// let element = 'h1'; // the first argument create the element
+// let attribute = {id: 'title', className: 'header', style: style }; // this object are the property that the element will have
+// let childnode = 'hello world first react script'; //any child content this element
+// let reactContainerId = document.getElementById('react-container');
 
-const title = createElement ( element , attribute , childnode );
+// const title = createElement ( element , attribute , childnode );
 
-render( title , reactContainerId );
+let elementJSX = <h1 id='title' class='header' style={{ background: 'red',color: 'white', fontfamily: 'verdana' }}>Hello wolrld react</h1>;
+
+render(
+    elementJSX
+    ,document.getElementById('react-container') );
