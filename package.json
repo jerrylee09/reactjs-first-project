@@ -1,0 +1,25 @@
+{
+  "name": "reactproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "httpster -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerrylee09/reactjs-first-project.git"
+  },
+  "author": "jerry lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jerrylee09/reactjs-first-project/issues"
+  },
+  "homepage": "https://github.com/jerrylee09/reactjs-first-project#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
