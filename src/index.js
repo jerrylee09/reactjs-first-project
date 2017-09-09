@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 // import { hello, goodbye} from './lib'
-import { SkiDayList } from './components/SkiDayList'
+import { SkiDayList } from './components/SkyDaylist.js'
 // import { BsModal } from './components/BsModal.js'
 
 window.React = React;
@@ -17,28 +17,27 @@ window.React = React;
 // );
 
 render(
-    <SkiDayList
-        days={
+    <SkiDayList days={
             [
                 {
                     resort: "Sqaw Valley",
-                    date: new Date('(9/9/2017'),
+                    date: new Date('9/9/2017'),
                     powder: true,
-                    backCountry:false
+                    backcountry:false
 
                 },
                 {
                     resort: "Jerry House",
-                    date: new Date('(7/4/2017'),
+                    date: new Date('7/4/2017'),
                     powder: false,
-                    backCountry:false
+                    backcountry:false
 
                 },
                 {
-                    resort: "jerry's Bedroom",
-                    date: new Date('(7/4/2017'),
+                    resort: "jerry Bedroom",
+                    date: new Date('7/4/2017'),
                     powder: false,
-                    backCountry:true
+                    backcountry:true
 
                 }
             ]
