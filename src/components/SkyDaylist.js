@@ -23,7 +23,7 @@ export const SkiDayList = ({days}) => (
                             // date={day.date}
                             // powder={day.powder}
                             // backcountry={day.backcountry}
-                            {...day}
+                            {...day} // this is es6 spread operator short hand for example above
                         />
                 )
             }
