@@ -1,7 +1,8 @@
 import Terrain from 'react-icons/lib/md/terrain'
 import SnowFlake from 'react-icons/lib/ti/weather-snow'
 import Calendar from 'react-icons/lib/fa/calendar'
-import { SkyDayRow } from './SkyDayRow.js'
+import { SkyDayRow } from './SkiDayRow.js'
+import { PropTypes } from 'prop-types'
 
 export const SkiDayList = ({days}) => (
     <table>
@@ -30,3 +31,19 @@ export const SkiDayList = ({days}) => (
         </tbody>
     </table>
 );
+
+SkiDayList.propTypes = {
+  days: PropTypes.array
+};
+
+// SkiDayList.propTypes = {
+//     days: function(props) {
+//         if(!Array.isArray(props.days)) {
+//             return new Error('SkiDayList Should be an array');
+//         } else if(!props.days.length) {
+//             return new Error('SkiDayList must have at least one recor');
+//         } else {
+//             return null;
+//         }
+//     }
+// };
