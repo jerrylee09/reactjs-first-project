@@ -1,7 +1,7 @@
 import React from 'react'
 import { createClass } from 'react'
-// import { SkiDayList } from './compnents/SkiDayCount'
-// import { SkiDayCount } from './components/SkiDayCount'
+import { SkiDayList } from './SkiDaylist'
+import { SkiDayCount } from './SkiDayCount'
 
 export const App = createClass ({
     getInitialState() {
@@ -31,10 +31,20 @@ export const App = createClass ({
             ]
         };
     },
+    countDays(filter) {
+        const { allSkiDays } = this.state
+        return allSkiDays.filter(
+            (day) =>  (filter) ? day['filter'] : day).length
+    },
     render() {
         return (
             <div className="app">
-                {this.state.allSkiDays[0]["resort"]}
+                <SkiDayList days={this.state.allSkiDays}/>
+                <SkiDayCount
+                     total={this.countDays()}
+                     powder={this.countDays("powder")}
+                     backcountry={this.countDays("backcountry")}
+                />
             </div>
         )
     }
